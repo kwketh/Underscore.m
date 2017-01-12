@@ -48,6 +48,7 @@
 @property (readonly) NSUInteger (^indexOf)(id obj);
 
 @property (readonly) USArrayWrapper *flatten;
+@property (readonly) USArrayWrapper *(^unionWith)(NSArray *array);
 @property (readonly) USArrayWrapper *(^without)(NSArray *values);
 @property (readonly) USArrayWrapper *shuffle;
 

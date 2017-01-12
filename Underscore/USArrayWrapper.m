@@ -155,6 +155,13 @@
     return [USArrayWrapper wrap:flatten(self.array)];
 }
 
+- (USArrayWrapper *(^)(NSArray *))unionWith
+{
+    return ^USArrayWrapper *(NSArray *array) {
+        return [USArrayWrapper wrap:[self.array arrayByAddingObjectsFromArray:array]];
+    };
+}
+
 - (USArrayWrapper *(^)(NSArray *))without
 {
     return ^USArrayWrapper *(NSArray *value) {
